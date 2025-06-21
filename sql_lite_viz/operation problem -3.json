@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "2eXuxyCz1F86gyC5z6Lwy",
+            "query": "/*\nIn the invoices_fact tables subtract the hours rate from the hours spent to estimate \nthe remaining budget allocation if hours_rate represents a fixed cost per hour. \nReturn the\n*/\n\nSELECT \n    activity_id,\n    hours_spent,\n    hours_rate,\n    hours_spent - hours_rate AS remaining_budget_estimate\nFROM \n    invoices_fact;\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "operation problem -3",
+            "createdAt": "2025-06-05T04:10:12.473Z"
+        }
+    ]
+}

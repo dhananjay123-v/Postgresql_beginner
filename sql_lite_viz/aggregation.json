@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "QNaScW3TJ2x4o0eQD64My",
+            "query": "-- SUM()\nSELECT \n    sum(salary_year_avg) AS total_salary\nFROM \n    job_postings_fact;\n\n\n-- count()\nSELECT \n    count(*) as total_row\nFROM \n    job_postings_fact;\n    \n-- DISTINCT keyword\nSELECT \n    count(DISTINCT job_title_short) as total_job\nFROM \n    job_postings_fact;\n\n\n--avg(),min(),max()\n\nSELECT \n    avg(salary_year_avg) as avg_salary,\n    min(salary_year_avg) as min_salary,\n\tmax(salary_year_avg) as max_salary\nFROM \n    job_postings_fact\nwhere \n\tjob_title_short ='Data Analyst';",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "aggregation",
+            "createdAt": "2025-06-05T05:18:26.292Z"
+        }
+    ]
+}

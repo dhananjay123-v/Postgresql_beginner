@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "kEg89G1gpi_xc0ipUifnY",
+            "query": "/*\nFind the average salary and number of job postings for each skill for this: \n\tWrite a query to list each unique skill from the skills_dim table. \n    Count how many job postings mention each skill from the skills_to_job_dim table.\n    Calculate the average yearly salary for job postings associated with each skill. \n    Group the results by the skill name.\n    Order By the average salary Hint: \n    Use LEFT JOIN to combine skills_dim, skills_job_dim, and job_postings_fact tables.\n\n*/\nselect \n\tskill_1.skills as skill_name,\n\tcount(skill_2.job_id) as total_job,\n\tavg(jobs.salary_year_avg) as avg_salary\nfrom\n\tskills_dim as skill_1\nleft join skills_job_dim as skill_2 on skill_1.skill_id=skill_2.skill_id\nleft join job_postings_fact as jobs on jobs.job_id=skill_2.job_id\ngroup by\n\tskill_1.skills\norder by\n\tavg_salary DESC\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "joins combine problem -4",
+            "createdAt": "2025-06-09T15:39:07.682Z"
+        }
+    ]
+}

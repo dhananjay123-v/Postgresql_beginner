@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "25RPoN_TczODPxLCZhfzy",
+            "query": "/*\nIn the job_postings_fact table calculate the total sum of the average yearly salary (salary_year_avg ) for all job postings that are marked as fully remote\n(job_work_from_ho TRUE) \nand divide it by the total count of salary_year_avg.\nTo get the total average yearly for fully remote jobs. Ensure to only include job postings where a yearly salary is specified (i salary_year_avg is not NULL). \n*/\n\n-- Note :: it is not complatly true answer because question is incomplate\n\nSELECT \n\tjob_title_short,\n    SUM(salary_year_avg) / COUNT(salary_year_avg) AS avg_salary_fully_remote\nFROM \n    job_postings_fact\ngroup by\n\tsalary_year_avg\nhaving \n    job_work_from_home = TRUE\n    AND salary_year_avg IS NOT NULL\norder by\n\tsalary_year_avg\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "agg problem-1",
+            "createdAt": "2025-06-07T03:20:51.749Z"
+        }
+    ]
+}

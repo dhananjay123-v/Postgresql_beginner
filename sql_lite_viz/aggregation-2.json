@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "sXUHpHlyH9NVcgUqxwnOa",
+            "query": "-- group by\n\nSELECT \n\tjob_title_short as jobs,\n    count(job_title_short) as job_count,\n    avg(salary_year_avg) as avg_salary,\n    min(salary_year_avg) as min_salary,\n\tmax(salary_year_avg) as max_salary\nFROM \n    job_postings_fact\ngroup by\n\tjob_title_short\nhaving\n\tcount(job_title_short)>100\norder by \t\n\tavg_salary\n    \n /*\nyou can not use this syntex is wrong so use having to avoid < 100\nwhere\n\tcount(job_title_short)>100\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "aggregation-2",
+            "createdAt": "2025-06-05T05:32:29.236Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "lWV064ZRnUyk1uSaQjyBy",
+            "query": "/*\nIn the job_postings_fact table count the total number of job postings that offer health insurance.\nUse the job_health_insurance column to determine if a job posting offers health insurance (TRUE means it does offer health insurance). \n*/\n\nSELECT\n\tjob_title_short,\n\tsum(job_health_insurance)\nFROM\n\tjob_postings_fact\ngroup by\n\tjob_title_short",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "agg problem-2",
+            "createdAt": "2025-06-07T03:20:41.637Z"
+        }
+    ]
+}

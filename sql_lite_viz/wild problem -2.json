@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "Amw-LYn4JjdSwV_JCBXmy",
+            "query": "/*\nSymbol\tMeaning\n^\t\tStart of string\n$\t\tEnd of string\n.\t\tMatches any single character\n*\t\tMatches 0 or more of the preceding token\n+\t\tMatches 1 or more of the preceding token\n?\t\tMatches 0 or 1 of the preceding token\n{n}\t\tMatches exactly n occurrences\n{n,}\tMatches n or more\n{n,m}\tMatches between n and m\n[]\t\tCharacter class (e.g., [aeiou] matches a vowel)\n[^]\t\tNegated character class\n\n\\\t\tEscape character\n\\s\t\tWhitespace (space, tab, etc.)\n\\S\t\tNon-whitespace\n\\w\t\tWord character (letters, digits, _)\n\\W\t\tNon-word character\n\\d\t\tDigit\n\\D\t\tNon-digit\n\\b\t\tWord boundary\n\\B\t\tNot a word boundary\n\nFind all job postings in the job_postings_fact where the job_title is exactly \"Engineer\" and one character followed after the term. \nGet the job_id, job_title, and job_posted_date. \n\n-- using AS\n\n-- Starts with 'Tech'\nWHERE name REGEXP '^Tech'\n\n-- Ends with 'Tech'\nWHERE name REGEXP 'Tech$'\n\n-- Contains 'Tech' followed by one character\nWHERE name REGEXP 'Tech.'\n\n-- Exactly 'Engineer' followed by one character\nWHERE job_title REGEXP '^Engineer.$'\n\n-- Exactly 'Engineer' followed by a space and a single word character\nWHERE job_title REGEXP '^Engineer\\\\s\\\\w$'\n\n-- Contains a digit\nWHERE name REGEXP '[0-9]'\n\n-- Contains only digits\nWHERE name REGEXP '^[0-9]+$'\n\n*/\nSELECT DISTINCT\n\tjob_id as jid,\n    job_title as j_tit,\n    job_posted_date jpd\nFROM \n\tjob_postings_fact\nWHERE \n\tj_tit REGEXP '^Engineer.';\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "wild problem -2",
+            "createdAt": "2025-06-03T11:38:11.981Z"
+        }
+    ]
+}

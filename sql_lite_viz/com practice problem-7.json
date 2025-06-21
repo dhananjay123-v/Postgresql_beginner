@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "_3tRDS2aWhTmdPjEQ30om",
+            "query": "/*\nIn the job_postings_fact table only get jobs that have an average yearly salary less  than $11,0000.\nAlso get the job_id, job_title_short, job_location, job_via, and salary_year_avg columns\n\n*/\n\nSELECT\n\tjob_id,\n    job_title_short,\n    job_location,\n    job_via,\n    salary_year_avg\n\t\nFROM \n\tjob_postings_fact\nwhere\n\tsalary_year_avg < 110000;",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "com practice problem-7",
+            "createdAt": "2025-06-02T14:14:51.650Z"
+        }
+    ]
+}

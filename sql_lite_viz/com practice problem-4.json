@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "nUp6feVf44fpHYuvm6lJj",
+            "query": "/*\nIn the job_postings_fact table get the job_id, job_title_short, job toce, job_via, and salary_year_avg columns.\nOnly look at jobs that are not posted 'via Linkedin'\n*/\n\nSELECT\n\tjob_id,\n    job_title_short,\n    job_location,\n    job_via,\n    salary_year_avg\n\t\nFROM \n\tjob_postings_fact\nwhere\n\tjob_via <> 'via LinkedIn'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "com practice problem-4",
+            "createdAt": "2025-06-02T14:04:43.290Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "_3cQcETNavByKrsx6fDtM",
+            "query": "/*\nIn the job postings fact table get the job id, job title short, job location, job via, and salary year avg columns.\nOnly return 'Full-Time' jobs (hint: look at the job_schedule_type column).\n\n*/\n\nSELECT\n\tjob_id,\n    job_title_short,\n    job_location,\n    job_via,\n    salary_year_avg\n\t\nFROM \n\tjob_postings_fact\nwhere \n\tjob_schedule_type = 'Full-time'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "com practice problem-2",
+            "createdAt": "2025-06-02T13:25:09.065Z"
+        }
+    ]
+}

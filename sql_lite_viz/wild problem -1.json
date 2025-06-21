@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "kzC5Biu4cC1YfWEAw8Q2E",
+            "query": "/*\nIn the company_dim table find all company names that include 'Tech' immediately followed by any single character. \nReturn the name column.\n*/\n\n/*\n-- 1.first any char , Tech , single char\nSELECT name\nFROM company_dim\nWHERE name LIKE '%Tech_';\n\n-- 2.single char, Tech , single char\nSELECT name\nFROM company_dim\nWHERE name REGEXP 'Tech.';\n\n-- 3. Tech , any char \nSELECT name\nFROM company_dim\nWHERE name LIKE 'Tech%';",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "wild problem -1",
+            "createdAt": "2025-06-03T11:31:07.678Z"
+        }
+    ]
+}

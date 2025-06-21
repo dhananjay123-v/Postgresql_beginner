@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "W03TQpFWRdCYG5MKfG5IB",
+            "query": "select \n\tjob_table.job_id,\n\tjob_table.job_title_short,\n\t--job_table.company_id,\n\t--company.company_id,\n\tcompany.name as company\nfrom\n\tjob_postings_fact as job_table\nleft join company_dim as company\non job_table.company_id=company.company_id\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "left_Joins",
+            "createdAt": "2025-06-07T06:06:17.759Z"
+        }
+    ]
+}

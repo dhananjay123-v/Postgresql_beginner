@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "qVgpf-tYTejhsUd0DsVeo",
+            "query": "-- rate hike as new column and project total\nselect \n\tproject_company,\n\tnerd_id,\n    nerd_role,\n    hours_spent,\n\thours_rate as orignal_rate,\n\thours_rate +5 as hike_rate,\n\t(hours_rate +5) * hours_spent as project_total \n\nfrom\n\t invoices_fact\nwhere \n\tproject_total > 1000",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "operations -1 ",
+            "createdAt": "2025-06-05T02:53:52.031Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "sh8E20nNtfkZSzSq1r3tp",
+            "query": "SELECT \n\tjob_id, \n\tjob_title_short, \n\tjob_location, \n\tjob_via, \n\tsalary_year_avg\nFROM \n\tjob_postings_fact\nWHERE \n\t(\n    (job_title_short = 'Data Analyst' AND salary_year_avg > 100000)\n    OR \n\t(job_title_short = 'Business Analyst' AND salary_year_avg > 70000)\n    )\nAND \n\t(job_location = 'Boston, MA' OR\tjob_location = 'Anywhere')\n\n-- by Luke \n  \n/*\nwhere \n\tjob_location IN ('Boston, MA' , 'Anywhere') and\n    (\n    (job_title_short = 'Data Analyst' AND salary_year_avg > 100000) or\n    (job_title_short = 'Business Analyst' AND salary_year_avg > 70000)\n     );\n*/\n    \n    \n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "combine problem-1",
+            "createdAt": "2025-06-01T05:32:25.639Z"
+        }
+    ]
+}

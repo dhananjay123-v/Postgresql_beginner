@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "jsWJ4kcw7BnQ7JZmchK6M",
+            "query": "/*\nFetch all job postings, including their job titles (job_title) and the names of the skills required (skills), even if no skills are listed for a job. \nEnsure that the job is located in \"New York\" and offers \"Health Insurance\".\nUse the job_postings_fact, skills_job_dim, and skills_dim tables. \n*/\n\nselect \n\tjob_tbl.job_title,\n\tCOALESCE(skill_1.skills, 'No skills listed') AS skills\nfrom\n\tjob_postings_fact as job_tbl\nleft join skills_job_dim as skill_2\non job_tbl.job_id=skill_2.job_id\nleft join skills_dim as skill_1\non skill_2.skill_id=skill_1.skill_id\nwhere \n\tjob_location ='New York' and job_health_insurance > 0",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "joins problem -2 ",
+            "createdAt": "2025-06-09T14:23:16.062Z"
+        }
+    ]
+}

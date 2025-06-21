@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "4YFZPo45sLZi0Rm1o-ffG",
+            "query": "/*\nIn the Invoices fact table divide the hours_spent by the hours_rate. \nReturn the activity_id as well. \nThis helps give us an efficiency ration a lower ratio could indicate a more cost-efficient task. \n*/\n\nSELECT \n   \tactivity_id,\n    hours_spent,\n    hours_rate,\n\thours_spent/hours_rate as ratio\n\t\n   \nFROM \n    invoices_fact\norder by \n\tratio",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "operation problem -2",
+            "createdAt": "2025-06-05T04:03:44.130Z"
+        }
+    ]
+}

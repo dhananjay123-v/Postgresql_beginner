@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "VJCC-KesWrD6FOH3q2Z38",
+            "query": "SELECT DISTINCT\n\tjob_location\nFROM \n\tjob_postings_fact\norder by\n\tjob_location ASC;",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "practice problem -1",
+            "createdAt": "2025-06-02T12:00:27.249Z"
+        }
+    ]
+}

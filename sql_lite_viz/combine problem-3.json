@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "ttqQBBo9OW2-xWX0MJpv8",
+            "query": "select \n\tproject_id,\n\thours_spent,\n\thours_rate as orignal_rate,\n\tsum(hours_spent * hours_rate) as project_orignal_cost,\n\thours_rate +5 as rate_hike,\n\tsum(hours_spent * (hours_rate+5)) as project_after_cost\nfrom\n\tinvoices_fact\ngroup by\n\tproject_id",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "combine problem-3",
+            "createdAt": "2025-06-07T04:25:19.313Z"
+        }
+    ]
+}

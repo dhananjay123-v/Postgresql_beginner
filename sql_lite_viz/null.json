@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "6tVYn9MQz_31TsuqaI0uT",
+            "query": "select \n\tjob_title_short,\n\tjob_location,\n\tjob_via,\n\tsalary_year_avg\nfrom\n\tjob_postings_fact\nwhere \n\tsalary_year_avg is NULL\norder by\n\tsalary_year_avg",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "null",
+            "createdAt": "2025-06-07T04:29:38.257Z"
+        }
+    ]
+}

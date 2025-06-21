@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "YgT7vfM4QXBtWvf4D_doD",
+            "query": "/*\nIn the job_postings_fact table count the number of job postings available for each country. \nUse the job_country column to group the job postings, and count the number of job postings (job_id) within each country group. \n*/\n\n--first way\n\nselect \n\tjob_id,\n    job_country,\n\tcount(job_country) as total_jobs_country\nfrom\n\tjob_postings_fact\ngroup by\n\tjob_country\norder by\n\tjob_id;\n\n\n--second way\n\nSELECT \n    job_country,\n    COUNT(job_id) AS total_job_postings\nFROM \n    job_postings_fact\nGROUP BY \n    job_country\nORDER BY \n    total_job_postings DESC;\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "agg problem -3",
+            "createdAt": "2025-06-07T03:31:41.662Z"
+        }
+    ]
+}

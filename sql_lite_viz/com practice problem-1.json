@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "hY3Ck9xmdxVcNErLSiM0o",
+            "query": "/*\nIn the job postings fact table get the job id, job_title_short, job location, job_via, and salary year_avg columns.\nOnly return rows where the job location is in 'Tampa, FL'\n\n*/\n\nSELECT\n\tjob_id,\n    job_title_short,\n    job_location,\n    job_via,\n    salary_year_avg\nFROM \n\tjob_postings_fact\nWHERE \n\tjob_location == 'Tampa, FL'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "com practice problem-1",
+            "createdAt": "2025-06-02T13:24:59.050Z"
+        }
+    ]
+}

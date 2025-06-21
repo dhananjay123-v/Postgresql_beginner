@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "5Kyy3aRQaqgQpPvJ3YsoK",
+            "query": "/*\nLook for non-senior data analyst or business analyst roles \n\n\tOnly get job titles that include either 'Data' or 'Business' \n\tAlso include those with 'Analyst' in any part of the title \n\tDon't include any job titles with 'Senior' followed by any character \n    \nGet the job title, location, and average yearly salary \n*/\n\nselect\n\tjob_title,job_location,salary_year_avg\nfrom \n\tjob_postings_fact\nwhere \n\t(job_title like '%Data%' or job_title like '%Business%')\n    and \n    job_title LIKE '%Analyst%'\n    and\n    job_title not like '%senior%'\n\t\n    \n    \n    --job_title <> 'Senior Data Analyst' or job_title = 'Business Analyst'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "combine problem -2",
+            "createdAt": "2025-06-03T12:27:57.842Z"
+        }
+    ]
+}
