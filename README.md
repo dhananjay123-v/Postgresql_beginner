@@ -1,1 +1,0 @@
-# Postgresql_beginner
