@@ -8,7 +8,6 @@ Why? It reveals how different skills impact salary levels for Data Analysts and 
 
 */
 
-
 SELECT
     skills,
     round(avg(salary_year_avg),0) as avg_salary 
@@ -23,5 +22,5 @@ GROUP BY
     skills
 ORDER BY
     avg_salary DESC
-LIMIT 25
+LIMIT 25;
 
